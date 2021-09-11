@@ -26,10 +26,10 @@ const server = app.listen(port, () => {
 
 // POST Route
 app.post("/postData", (req, res) => {
-  projectData.d = req.body.date;
-  projectData.temperature = req.body.temp;
-  projectData.feelings = req.body.content;
-  res.send();
+  projectData.currentDate = req.body.currentDate;
+  projectData.temperature = req.body.temperature;
+  projectData.contentOfFeelings = req.body.contentOfFeelings;
+  res.send({ success: true });
 });
 // Get Rout
 app.get("/getData", (req, res) => {
